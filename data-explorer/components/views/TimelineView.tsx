@@ -19,8 +19,9 @@ import {
   CardTitle,
   CardDescription
 } from '@/components/ui/card';
+import { ResearchData } from '@/types/data';
 
-export default function TimelineView({ data }) {
+export default function TimelineView({ data }: { data: ResearchData }) {
   const [activePhase, setActivePhase] = useState(0);
   
   const formatPhaseData = () => {
@@ -93,7 +94,7 @@ export default function TimelineView({ data }) {
 
   const phases = formatPhaseData();
 
-  const renderPhaseChart = (phase) => {
+  const renderPhaseChart = (phase: { id: number; chartData: any[] }) => {
     switch (phase.id) {
       case 0:
         return (

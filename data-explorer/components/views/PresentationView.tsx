@@ -15,8 +15,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Gradient } from '@/lib/gradient';
 import { colors } from '@/lib/colors';
 import { getButtonStyles, getChartColors } from '@/lib/colorUtils';
+import { ResearchData } from '@/types/data';
 
-export default function PresentationView({ data }) {
+export default function PresentationView({ data }: { data: ResearchData }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showNotes, setShowNotes] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -127,7 +128,7 @@ export default function PresentationView({ data }) {
                   </p>
                 </div>
                 <ul className="space-y-4">
-                  {data.metadata.abstract.keyFindings.map((finding, i) => (
+                  {data.metadata.abstract.keyFindings.map((finding: {description: string}, i: number) => (
                   <motion.li 
                     key={i}
                     initial={{ opacity: 0, x: -20 }}
@@ -191,7 +192,7 @@ export default function PresentationView({ data }) {
               Key Metrics
             </h2>
             <div className="grid grid-cols-3 gap-4 mb-8">
-              {data.findings.overallImpact.keyMetrics.map((metric, index) => (
+              {data.findings.overallImpact.keyMetrics.map((metric:{metric: string, value: number}, index: number) => (
                 <div 
                   key={index} 
                   className="bg-white p-4 rounded-lg shadow-md border-l-4"
@@ -277,7 +278,7 @@ export default function PresentationView({ data }) {
               Future Directions
             </motion.h2>
             <div className="grid grid-cols-3 gap-6 relative">
-              {data.recommendations.map((rec, index) => (
+              {data.recommendations.map((rec: {area: string, description: string, benefits: string[]}, index: number) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -302,7 +303,7 @@ export default function PresentationView({ data }) {
                       {rec.description}
                     </p>
                     <ul className="space-y-2">
-                      {rec.benefits.map((benefit, i) => (
+                      {rec.benefits.map((benefit:string, i:number) => (
                         <motion.li 
                           key={i}
                           initial={{ opacity: 0, x: -10 }}
@@ -340,7 +341,7 @@ export default function PresentationView({ data }) {
     }
   }, [isPlaying, currentSlide]);
 
-  const navigateSlide = (direction) => {
+  const navigateSlide = (direction:string) => {
     setTransitionDirection(direction);
     if (direction === 'right' && currentSlide < formatSlides().length - 1) {
       setCurrentSlide(currentSlide + 1);

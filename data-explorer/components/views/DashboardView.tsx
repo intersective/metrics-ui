@@ -26,16 +26,35 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { colors } from '@/lib/colors';
-import { getButtonStyles, getChartColors } from '@/lib/colorUtils';
+import { getButtonStyles } from '@/lib/colorUtils';
+import { ResearchData, MetricsData } from '@/types/data';
 
-export default function DashboardView({ rdata, mdata }) {
+export default function DashboardView({ rdata, mdata }: { rdata: ResearchData; mdata: MetricsData }) {
   const [showFilters, setShowFilters] = useState(false);
   const [selectedCohort, setSelectedCohort] = useState('all');
-  const [selectedModule, setSelectedModule] = useState(null);
+  const [selectedModule, setSelectedModule] = useState<string>('collaboration');
   const [drilldownModule, setDrilldownModule] = useState(null);
   const [filteredCohorts, setFilteredCohorts] = useState(mdata.cohorts);
-  const [radarData, setRadarData] = useState([]);
-  const [skillData, setSkillData] = useState([]);
+  const [radarData, setRadarData] = useState<{ 
+    subject: string; 
+    'Before Module': number; 
+    'After Module': number; 
+    description: string; 
+    n: number; 
+    p: number; 
+    t_stat: number; 
+    effect_size: number; 
+  }[]>([]);
+  const [skillData, setSkillData] = useState<{ 
+    subject: string; 
+    'Before Module': number; 
+    'After Module': number; 
+    description: string; 
+    n: number; 
+    p: number; 
+    t_stat: number; 
+    effect_size: number; 
+  }[]>([]);
 
   useEffect(() => {
     if (selectedCohort === 'all') {
@@ -97,7 +116,7 @@ export default function DashboardView({ rdata, mdata }) {
 
   useEffect(() => {
     if (drilldownModule) {
-      const formatSkillData = (moduleKey) => {
+      const formatSkillData = (moduleKey: string) => {
         const skills = mdata.skillMetrics.filter(skill => skill.module === moduleKey);
 
         return skills.map(skill => {
@@ -139,14 +158,14 @@ export default function DashboardView({ rdata, mdata }) {
     });
   };
 
-  const getFeedbackForModule = (moduleKey) => {
+  const getFeedbackForModule = (moduleKey: string) => {
     if (!moduleKey) {
       moduleKey = 'collaboration';
     };
     return rdata.findings.learningOutcomes.moduleSpecificFindings[moduleKey].feedback;
   };
 
-  const getImprovementSuggestionsForModule = (moduleKey) => {
+  const getImprovementSuggestionsForModule = (moduleKey: string) => {
     if (!moduleKey) {
       moduleKey = 'collaboration';
     };
@@ -410,7 +429,7 @@ export default function DashboardView({ rdata, mdata }) {
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-2">Module</label>
               <select 
-                value={selectedModule}
+                value={selectedModule || 'collaboration'}
                 onChange={(e) => setSelectedModule(e.target.value)}
                 className="w-full p-2 border rounded-md"
               >
@@ -423,7 +442,7 @@ export default function DashboardView({ rdata, mdata }) {
               <div>
                 <h3 className="text-lg font-semibold mb-2">Feedback</h3>
                 <ul className="list-disc pl-5">
-                  {getFeedbackForModule(selectedModule).map((feedback, index) => (
+                  {getFeedbackForModule(selectedModule).map((feedback: string, index: number) => (
                     <li key={index}><i>{feedback}</i></li>
                   ))}
                 </ul>
@@ -431,7 +450,7 @@ export default function DashboardView({ rdata, mdata }) {
               <div>
                 <h3 className="text-lg font-semibold mb-2">Improvement Suggestions</h3>
                 <ul className="list-disc pl-5">
-                  {getImprovementSuggestionsForModule(selectedModule).map((suggestion, index) => (
+                  {getImprovementSuggestionsForModule(selectedModule).map((suggestion: string, index: number) => (
                     <li key={index}><i>{suggestion}</i></li>
                   ))}
                 </ul>

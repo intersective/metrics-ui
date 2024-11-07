@@ -1,6 +1,6 @@
 // utils/data-transforms.ts
 
-import { ModuleData, ResearchData } from '@/types/research';
+import { ModuleData, ResearchData } from '@/types/data';
 
 export const formatModuleData = (modules: Record<string, ModuleData>) => {
   return Object.entries(modules).map(([key, value]) => ({

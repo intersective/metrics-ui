@@ -13,30 +13,10 @@ import { getButtonStyles } from '@/lib/colorUtils';
 
 // Views
 import DashboardView from '@/components/views/DashboardView';
-import TimelineView from '@/components/views/TimelineView';
+// import TimelineView from '@/components/views/TimelineView';
 import PresentationView from '@/components/views/PresentationView';
 import DataChatView from '@/components/views/DataChatView';
-
-interface ResearchData {
-  metadata: {
-    title: string;
-    subtitle: string;
-    institution: string;
-  };
-  // Add other properties as needed
-}
-interface MetricsData {
-  // Add properties as needed
-  cohorts: {
-    "key": string,
-    "name": string,
-    "year": number,
-    "semester": string
-  }[];
-  moduleMetrics: {"name": string, "key": string}[];
-  assessmentMetrics: {"name": string}[];
-  skillMetrics: {"name": string, "key": string}[];
-}
+import { ResearchData, MetricsData } from '@/types/data';
 
 export default function ResearchExplorer({ researchData, metricsData }: { researchData: ResearchData, metricsData: MetricsData }) {
   const [activeView, setActiveView] = useState('dashboard');
