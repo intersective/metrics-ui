@@ -1,0 +1,122 @@
+[
+    {
+    "key": "communicateStrengths",
+    "name": "Communicate Strengths",
+    "description": "Effectively communicate individual strengths and contributions within a team",
+    "question": "and can articulate my strengths as a team member"
+    },
+    {
+    "key": "teamSetup",
+    "name": "Team Setup",
+    "description": "Optimize team composition and roles for effective collaboration",
+    "question": "how to set up a new team for success"
+    },
+    {
+    "key": "effectiveCommunication",
+    "name": "Effective Communication",
+    "description": "Enhance communication skills for clear and efficient team interactions",
+    "question": "confident communicating and collaborating effectively when working in a virtual team environment"
+    },
+    {
+    "key": "conflictNavigation",
+    "name": "Conflict Navigation",
+    "description": "Navigate and resolve conflicts within a team setting",
+    "question": "effectively and efficiently navigate team conflicts while working towards solutions"
+    },
+    {
+    "key": "criticalThinking",
+    "name": "Critical Thinking",
+    "description": "Develop critical thinking skills for effective problem-solving",
+    "question": "to practise critical thinking and structured problem-solving while working towards solutions"
+    },
+    {
+    "key": "problemArticulation",
+    "name": "Problem Articulation",
+    "description": "Articulate complex problems for systematic analysis",
+    "question": "to truly understand the root cause of a problem and can accurately and succinctly articulate that core problem"
+    },
+    {
+    "key": "adaptability",
+    "name": "Adaptability",
+    "description": "Enhance adaptability in dynamic problem-solving scenarios",
+    "question": "to maintain a level of adaptability and flexibility during the generation of solutions to situations"
+    },
+    {
+    "key": "logicalApproach",
+    "name": "Logical Approach",
+    "description": "Develop a logical approach to problem-solving and idea generation",
+    "question": "to use a structured and logical approach when solving complex problems problem solving"
+    },
+    {
+    "key": "creativeThinking",
+    "name": "Creative Thinking",
+    "description": "Foster creative thinking for innovative solutions",
+    "question": "to think creatively, innovatively and divergently initiate fresh solutions to complex problem"
+    },
+    {
+    "key": "resilience",
+    "name": "Resilience",
+    "description": "Build resilience in the face of challenges and setbacks",
+    "question": "cognitive flexibility and curiosity to continue investigating the best solution when aspects of the innovation aren’t working out"
+    },
+    {
+    "key": "ideaCommunication",
+    "name": "Idea Communication",
+    "description": "Effectively communicate and pitch innovative ideas",
+    "question": "to pitch an idea succinctly, clearly and persuasively, selecting appropriate presentation materials to support key information"
+    },
+    {
+    "key": "valueArticulation",
+    "name": "Value Articulation",
+    "description": "Articulate personal and cultural values effectively",
+    "question": "to articulate my own personal & workplace values"
+    },
+    {
+    "key": "workplaceValues",
+    "name": "Workplace Values",
+    "description": "Understand and navigate workplace values and norms",
+    "question": "to identity organisations that share my personal and workplace values"
+    },
+    {
+    "key": "worldviewNavigation",
+    "name": "Worldview Navigation",
+    "description": "Navigate diverse worldviews and perspectives",
+    "question": "at perceiving others’ worldviews and effectively acknowledging, navigating and respecting these views when working in a multicultural team setting"
+    },
+    {
+    "key": "culturalContext",
+    "name": "Cultural Context",
+    "description": "Understand cultural contexts and adapt behavior accordingly",
+    "question": "and take into consideration local culture and business intelligence when working with an international client/organisation"
+    },
+    {
+    "key": "applicationUnderstanding",
+    "name": "Application Understanding",
+    "description": "Understand the application of data science concepts in real-world scenarios",
+    "question": "the use of data science within my field of study and how it applies to my future careers"
+    },
+    {
+    "key": "conceptUnderstanding",
+    "name": "Concept Understanding",
+    "description": "Grasp fundamental data science concepts and methodologies",
+    "question": "the key concepts and techniques involved in a data analysis workflow"
+    },
+    {
+    "key": "dataCleaning",
+    "name": "Data Cleaning",
+    "description": "Clean and preprocess data for analysis",
+    "question": "and am able to explain how to produce a clean data set"
+    },
+    {
+    "key": "basicAnalysis",
+    "name": "Basic Analysis",
+    "description": "Conduct basic data analysis and visualization",
+    "question": "and am able to explain how to perform a basic data analysis in order to provide insights"
+    },
+    {
+    "key": "insightPresentation",
+    "name": "Insight Presentation",
+    "description": "Present data-driven insights effectively",
+    "question": "and am able to summarise and identify presentable data driven insights in a report"
+    }
+]

@@ -1,0 +1,739 @@
+{
+  "cohorts": [
+    {
+      "key": "baseline_2023",
+      "name": "No AI Feedback",
+      "year": 2023,
+      "semester": "Spring"
+    },
+    {
+      "key": "cohort1_2024",
+      "name": "AI Cohort 1",
+      "year": 2024,
+      "semester": "Fall"
+    },
+    {
+      "key": "cohort2_2024",
+      "name": "AI Cohort 2",
+      "year": 2024,
+      "semester": "Spring"
+    }
+  ],
+  "assessmentMetrics": [
+    {
+      "title": "Understanding of Professional Application of Skills",
+      "dataType": "choice percentage",
+      "assessor": "self",
+      "baseline_2023": 86,
+      "cohort1_2024": 91,
+      "cohort2_2024": 88
+    },
+    {
+      "title": "Engagement and Relevance",
+      "dataType": "choice percentage",
+      "assessor": "self",
+      "baseline_2023": 83,
+      "cohort1_2024": 87,
+      "cohort2_2024": 86
+    },
+    {
+      "title": "Suitability of Challenge Level",
+      "dataType": "choice percentage",
+      "assessor": "self",
+      "baseline_2023": 82,
+      "cohort1_2024": 87,
+      "cohort2_2024": 86
+    },
+    {
+      "title": "Platform Rating",
+      "dataType": "choice percentage",
+      "assessor": "self",
+      "baseline_2023": 85,
+      "cohort1_2024": 88,
+      "cohort2_2024": 90
+    },
+    {
+      "title": "Willingness to Recommend",
+      "dataType": "choice percentage",
+      "dataSource": {
+        "question": "Would you recommend this program to a friend or colleague?",
+        "choiceToCount": "yes"
+      },
+      "assessor": "self",
+      "baseline_2023": 84,
+      "cohort1_2024": 88,
+      "cohort2_2024": 88
+    }
+  ],
+  "moduleMetrics": [
+    {
+      "name": "Collaboration",
+      "key": "collaboration",
+      "participation": {
+        "dataType": "number",
+        "dataMethod": "count",
+        "metricType": "aggregate",
+        "dataSource": {
+          "sourceType": "assessment",
+          "countProperty": "submitted",
+          "series": [
+            {
+              "key": "started",
+              "label": "Started",
+              "assessment": "self assessment"
+            },
+            {
+              "key": "completed",
+              "label": "Completed",
+              "assessment": "feedback"
+            }
+          ]
+        },
+        "baseline_2023": {
+          "started": null,
+          "completed": null
+        },
+        "cohort1_2024": {
+          "started": 102,
+          "completed": 58
+        },
+        "cohort2_2024": {
+          "started": 187,
+          "completed": 105
+        }
+      }
+    },
+    {
+      "name": "Problem Solving",
+      "key": "problemSolving",
+      "participation": {
+        "dataType": "number",
+        "dataMethod": "count",
+        "metricType": "aggregate",
+        "dataSource": {
+          "sourceType": "assessment",
+          "countProperty": "submitted",
+          "series": [
+            {
+              "key": "started",
+              "label": "Started",
+              "assessment": "self assessment"
+            },
+            {
+              "key": "completed",
+              "label": "Completed",
+              "assessment": "feedback"
+            }
+          ]
+        },
+        "baseline_2023": {
+          "started": null,
+          "completed": null
+        },
+        "cohort1_2024": {
+          "started": 57,
+          "completed": 41
+        },
+        "cohort2_2024": {
+          "started": 110,
+          "completed": 83
+        }
+      }
+    },
+    {
+      "name": "Innovation",
+      "key": "innovation",
+      "participation": {
+        "dataType": "number",
+        "dataMethod": "count",
+        "metricType": "aggregate",
+        "dataSource": {
+          "sourceType": "assessment",
+          "countProperty": "submitted",
+          "series": [
+            {
+              "key": "started",
+              "label": "Started",
+              "assessment": "self assessment"
+            },
+            {
+              "key": "completed",
+              "label": "Completed",
+              "assessment": "feedback"
+            }
+          ]
+        },
+        "baseline_2023": {
+          "started": null,
+          "completed": null
+        },
+        "cohort1_2024": {
+          "started": 44,
+          "completed": 25
+        },
+        "cohort2_2024": {
+          "started": 82,
+          "completed": 51
+        }
+      }
+    },
+    {
+      "name": "Cultural Intelligence",
+      "key": "culturalIntelligence",
+      "participation": {
+        "dataType": "number",
+        "dataMethod": "count",
+        "metricType": "aggregate",
+        "dataSource": {
+          "sourceType": "assessment",
+          "countProperty": "submitted",
+          "series": [
+            {
+              "key": "started",
+              "label": "Started",
+              "assessment": "self assessment"
+            },
+            {
+              "key": "completed",
+              "label": "Completed",
+              "assessment": "feedback"
+            }
+          ]
+        },
+        "baseline_2023": {
+          "started": null,
+          "completed": null
+        },
+        "cohort1_2024": {
+          "started": 65,
+          "completed": 51
+        },
+        "cohort2_2024": {
+          "started": 117,
+          "completed": 97
+        }
+      }
+    },
+    {
+      "name": "Data Science",
+      "key": "dataScience",
+      "participation": {
+        "dataType": "number",
+        "dataMethod": "count",
+        "metricType": "aggregate",
+        "dataSource": {
+          "sourceType": "assessment",
+          "countProperty": "submitted",
+          "series": [
+            {
+              "key": "started",
+              "label": "Started",
+              "assessment": "self assessment"
+            },
+            {
+              "key": "completed",
+              "label": "Completed",
+              "assessment": "feedback"
+            }
+          ]
+        },
+        "baseline_2023": {
+          "started": null,
+          "completed": null
+        },
+        "cohort1_2024": {
+          "started": 57,
+          "completed": 35
+        },
+        "cohort2_2024": {
+          "started": 82,
+          "completed": 49
+        }
+      }
+    }
+  ],
+  "skillMetrics": [
+    {
+      "key": "communicateStrengths",
+      "name": "Communicate Strengths",
+      "categories": ["communication", "collaboration"],
+      "description": "Effectively communicate individual strengths and contributions within a team",
+      "dataType": "percentage",
+      "dataMethod": "average",
+      "metricType": "compare then aggregate",
+      "dataSource": {
+        "sourceType": "assessment",
+        "countProperty": "choice",
+        "series": [
+          {
+            "key": "before",
+            "label": "Before",
+            "assessment": "self assessment",
+            "choices": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+          },
+          {
+            "key": "completed",
+            "label": "Completed",
+            "assessment": "feedback"
+          }
+        ]
+      },
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 81,
+          "after": 91,
+          "improvement": 10
+        },
+        "cohort2_2024": {
+          "before": 81,
+          "after": 91,
+          "improvement": 10
+        }
+      }
+    },
+    {
+      "key": "teamSetup",
+      "name": "Team Setup",
+      "categories": ["collaboration"],
+      "description": "Optimize team composition and roles for effective collaboration",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 71,
+          "after": 90,
+          "improvement": 19
+        },
+        "cohort2_2024": {
+          "before": 71,
+          "after": 90,
+          "improvement": 19
+        }
+      }
+    },
+    {
+      "key": "effectiveCommunication",
+      "name": "Effective Communication",
+      "categories": ["communication", "collaboration"],
+      "description": "Enhance communication skills for clear and efficient team interactions",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 79,
+          "after": 89,
+          "improvement": 10
+        },
+        "cohort2_2024": {
+          "before": 79,
+          "after": 89,
+          "improvement": 10
+        }
+      }
+    },
+    {
+      "key": "conflictNavigation",
+      "name": "Conflict Navigation",
+      "categories": ["communication", "collaboration", "resilience"],
+      "description": "Navigate and resolve conflicts within a team setting",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 78,
+          "after": 90,
+          "improvement": 12
+        },
+        "cohort2_2024": {
+          "before": 78,
+          "after": 90,
+          "improvement": 12,
+          "pValue": 0.01,
+          "effectSize": 0.45
+        }
+      }
+    },
+    {
+      "key": "criticalThinking",
+      "name": "Critical Thinking",
+      "categories": ["problem solving"],
+      "description": "Develop critical thinking skills for effective problem-solving",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 78,
+          "after": 89,
+          "improvement": 11
+        },
+        "cohort2_2024": {
+          "before": 78,
+          "after": 89,
+          "improvement": 11
+        }
+      }
+    },
+    {
+      "key": "problemArticulation",
+      "name": "Problem Articulation",
+      "categories": ["problem solving", "communication"],
+      "description": "Articulate complex problems for systematic analysis",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 79,
+          "after": 89,
+          "improvement": 10
+        },
+        "cohort2_2024": {
+          "before": 79,
+          "after": 89,
+          "improvement": 10
+        }
+      }
+    },
+    {
+      "key": "adaptability",
+      "name": "Adaptability",
+      "categories": ["problem solving", "resilience"],
+      "description": "Enhance adaptability in dynamic problem-solving scenarios",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 78,
+          "after": 89,
+          "improvement": 11
+        },
+        "cohort2_2024": {
+          "before": 78,
+          "after": 89,
+          "improvement": 11
+        }
+      }
+    },
+
+    {
+      "key": "logicalApproach",
+      "name": "Logical Approach",
+      "categories": ["problem solving"],
+      "description": "Develop a logical approach to problem-solving and idea generation",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 78,
+          "after": 89,
+          "improvement": 11
+        },
+        "cohort2_2024": {
+          "before": 78,
+          "after": 89,
+          "improvement": 11
+        }
+      }
+    },
+    {
+      "key": "creativeThinking",
+      "name": "Creative Thinking",
+      "categories": ["problem solving", "innovation"],
+      "description": "Foster creative thinking for innovative solutions",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 78,
+          "after": 86,
+          "improvement": 8
+        },
+        "cohort2_2024": {
+          "before": 78,
+          "after": 86,
+          "improvement": 8
+        }
+      }
+    },
+    {
+      "key": "resilience",
+      "name": "Resilience",
+      "categories": ["resilience"],
+      "description": "Build resilience in the face of challenges and setbacks",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 77,
+          "after": 86,
+          "improvement": 9
+        },
+        "cohort2_2024": {
+          "before": 77,
+          "after": 86,
+          "improvement": 9
+        }
+      }
+    },
+    {
+      "key": "ideaCommunication",
+      "name": "Idea Communication",
+      "categories": ["communication", "innovation"],
+      "description": "Effectively communicate and pitch innovative ideas",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 73,
+          "after": 88,
+          "improvement": 15
+        },
+        "cohort2_2024": {
+          "before": 73,
+          "after": 88,
+          "improvement": 15
+        }
+      }
+    },
+    {
+      "key": "valueArticulation",
+      "name": "Value Articulation",
+      "categories": ["communication", "innovation"],
+      "description": "Articulate personal and cultural values effectively",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 81,
+          "after": 89,
+          "improvement": 8
+        },
+        "cohort2_2024": {
+          "before": 81,
+          "after": 89,
+          "improvement": 8
+        }
+      }
+    },
+    {
+      "key": "workplaceValues",
+      "name": "Workplace Values",
+      "categories": ["ethics", "cultural intelligence"],
+      "description": "Understand and navigate workplace values and norms",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 75,
+          "after": 89,
+          "improvement": 14
+        },
+        "cohort2_2024": {
+          "before": 75,
+          "after": 89,
+          "improvement": 14
+        }
+      }
+    },
+    {
+      "key": "worldviewNavigation",
+      "name": "Worldview Navigation",
+      "categories": ["cultural intelligence"],
+      "description": "Navigate diverse worldviews and perspectives",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 84,
+          "after": 89,
+          "improvement": 5
+        },
+        "cohort2_2024": {
+          "before": 84,
+          "after": 89,
+          "improvement": 5
+        }
+      }
+    },
+    {
+      "key": "culturalContext",
+      "name": "Cultural Context",
+      "categories": ["cultural intelligence"],
+      "description": "Understand cultural contexts and adapt behavior accordingly",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 78,
+          "after": 88,
+          "improvement": 10
+        },
+        "cohort2_2024": {
+          "before": 78,
+          "after": 88,
+          "improvement": 10
+        }
+      }
+    },
+    {
+      "key": "applicationUnderstanding",
+      "name": "Application Understanding",
+      "description": "Understand the application of data science concepts in real-world scenarios",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 74,
+          "after": 86,
+          "improvement": 12
+        },
+        "cohort2_2024": {
+          "before": 74,
+          "after": 86,
+          "improvement": 12
+        }
+      }
+    },
+    {
+      "key": "conceptUnderstanding",
+      "name": "Concept Understanding",
+      "categories": ["data science", "critical thinking"],
+      "description": "Grasp fundamental data science concepts and methodologies",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 65,
+          "after": 88,
+          "improvement": 23
+        },
+        "cohort2_2024": {
+          "before": 65,
+          "after": 88,
+          "improvement": 23
+        }
+      }
+    },
+    {
+      "key": "dataCleaning",
+      "name": "Data Cleaning",
+      "categories": ["data science", "problem solving"],
+      "description": "Clean and preprocess data for analysis",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 60,
+          "after": 85,
+          "improvement": 25
+        },
+        "cohort2_2024": {
+          "before": 60,
+          "after": 85,
+          "improvement": 25
+        }
+      }
+    },
+    {
+      "key": "basicAnalysis",
+      "name": "Basic Analysis",
+      "categories": ["data science", "critical thinking"],
+      "description": "Conduct basic data analysis and visualization",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 65,
+          "after": 85,
+          "improvement": 20
+        },
+        "cohort2_2024": {
+          "before": 65,
+          "after": 85,
+          "improvement": 20
+        }
+      }
+    },
+    {
+      "key": "insightPresentation",
+      "name": "Insight Presentation",
+      "categories": ["data science", "communication"],
+      "description": "Present data-driven insights effectively",
+      "data": {
+        "baseline_2023": {
+          "before": null,
+          "after": null,
+          "improvement": null
+        },
+        "cohort1_2024": {
+          "before": 69,
+          "after": 85,
+          "improvement": 16
+        },
+        "cohort2_2024": {
+          "before": 69,
+          "after": 85,
+          "improvement": 16
+        }
+      }
+    }
+  ]
+}

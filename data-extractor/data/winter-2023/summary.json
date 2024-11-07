@@ -1,0 +1,247 @@
+[
+    {
+        "file": "Baseline_Reflection_on_your_Data_Scientist_Skills-data.csv",
+        "averages": [
+            {
+                "question": "the use of data science within my field of study and how it applies to my future careers",
+                "average_baseline": 3.547945205479452,
+                "average_final": 4.027397260273973,
+                "average_change": 0.4794520547945205,
+                "average_change_percent": 11.986301369863012,
+                "n": 73,
+                "p": 0.0005450649510362868,
+                "t_stat": -3.619613829965134,
+                "Effect Size (Cohen's d)": 0.4996814271737754
+            },
+            {
+                "question": "the key concepts and techniques involved in a data analysis workflow",
+                "average_baseline": 3.26027397260274,
+                "average_final": 4.027397260273973,
+                "average_change": 0.7671232876712328,
+                "average_change_percent": 19.17808219178082,
+                "n": 73,
+                "p": 2.6763857043300114e-06,
+                "t_stat": -5.097349206185934,
+                "Effect Size (Cohen's d)": 0.7294288918829165
+            },
+            {
+                "question": "and am able to explain how to produce a clean data set",
+                "average_baseline": 3.0821917808219177,
+                "average_final": 3.7534246575342465,
+                "average_change": 0.6712328767123288,
+                "average_change_percent": 16.78082191780822,
+                "n": 73,
+                "p": 1.793333828416088e-05,
+                "t_stat": -4.595994686183309,
+                "Effect Size (Cohen's d)": 0.6266491918396084
+            },
+            {
+                "question": "and am able to explain how to perform a basic data analysis in order to provide insights",
+                "average_baseline": 3.3013698630136985,
+                "average_final": 3.863013698630137,
+                "average_change": 0.5616438356164384,
+                "average_change_percent": 14.04109589041096,
+                "n": 73,
+                "p": 0.00043709123245617266,
+                "t_stat": -3.6868674933806114,
+                "Effect Size (Cohen's d)": 0.5441931856416741
+            },
+            {
+                "question": "and am able to summarise and identify presentable data driven insights in a report",
+                "average_baseline": 3.5205479452054793,
+                "average_final": 4.013698630136986,
+                "average_change": 0.4931506849315068,
+                "average_change_percent": 12.32876712328767,
+                "n": 73,
+                "p": 0.000502767927600306,
+                "t_stat": -3.6443046589823944,
+                "Effect Size (Cohen's d)": 0.4999035772819113
+            }
+        ]
+    },
+    {
+        "file": "Baseline_Reflection_on_your_Collaboration_skills-data.csv",
+        "averages": [
+            {
+                "question": "and can articulate my strengths as a team member",
+                "average_baseline": 3.9877300613496933,
+                "average_final": 4.404907975460123,
+                "average_change": 0.4171779141104294,
+                "average_change_percent": 10.429447852760736,
+                "n": 163,
+                "p": 2.0003811033033147e-10,
+                "t_stat": -6.791620452762671,
+                "Effect Size (Cohen's d)": 0.6080888842624378
+            },
+            {
+                "question": "how to set up a new team for success",
+                "average_baseline": 3.4171779141104293,
+                "average_final": 4.47239263803681,
+                "average_change": 1.0552147239263803,
+                "average_change_percent": 26.380368098159508,
+                "n": 163,
+                "p": 1.4664261685543584e-31,
+                "t_stat": -14.676447538813694,
+                "Effect Size (Cohen's d)": 1.1325352217987674
+            },
+            {
+                "question": "confident communicating and collaborating effectively when working in a virtual team environment",
+                "average_baseline": 3.791411042944785,
+                "average_final": 4.3496932515337425,
+                "average_change": 0.558282208588957,
+                "average_change_percent": 13.957055214723926,
+                "n": 163,
+                "p": 6.615772212972522e-11,
+                "t_stat": -6.995147136044876,
+                "Effect Size (Cohen's d)": 0.6626774813377143
+            },
+            {
+                "question": "effectively and efficiently navigate team conflicts while working towards solutions",
+                "average_baseline": 3.6625766871165646,
+                "average_final": 4.41717791411043,
+                "average_change": 0.754601226993865,
+                "average_change_percent": 18.865030674846626,
+                "n": 163,
+                "p": 1.7885099278232137e-18,
+                "t_stat": -9.939951126457096,
+                "Effect Size (Cohen's d)": 0.9175719651786326
+            }
+        ]
+    },
+    {
+        "file": "Baseline_Reflection_on_your_Problem_Solving_skills-data.csv",
+        "averages": [
+            {
+                "question": "to practise critical thinking and structured problem-solving while working towards solutions",
+                "average_baseline": 3.8085106382978724,
+                "average_final": 4.329787234042553,
+                "average_change": 0.5212765957446809,
+                "average_change_percent": 13.031914893617023,
+                "n": 94,
+                "p": 2.063751645668584e-07,
+                "t_stat": -5.61077139746477,
+                "Effect Size (Cohen's d)": 0.6691173701992251
+            },
+            {
+                "question": "to truly understand the root cause of a problem and can accurately and succinctly articulate that core problem",
+                "average_baseline": 3.797872340425532,
+                "average_final": 4.223404255319149,
+                "average_change": 0.425531914893617,
+                "average_change_percent": 10.638297872340425,
+                "n": 94,
+                "p": 0.0003520248462564199,
+                "t_stat": -3.710468915203087,
+                "Effect Size (Cohen's d)": 0.5040726622706871
+            },
+            {
+                "question": "to maintain a level of adaptability and flexibility during the generation of solutions to situations",
+                "average_baseline": 3.7872340425531914,
+                "average_final": 4.351063829787234,
+                "average_change": 0.5638297872340425,
+                "average_change_percent": 14.095744680851062,
+                "n": 94,
+                "p": 3.3952505977263163e-09,
+                "t_stat": -6.532902161509407,
+                "Effect Size (Cohen's d)": 0.7577036106797427
+            }
+        ]
+    },
+    {
+        "file": "Baseline_Reflection_on_your_Innovation_Skills-data.csv",
+        "averages": [
+            {
+                "question": "to use a structured and logical approach when solving complex problems problem solving",
+                "average_baseline": 3.8529411764705883,
+                "average_final": 4.1911764705882355,
+                "average_change": 0.3382352941176471,
+                "average_change_percent": 8.455882352941178,
+                "n": 68,
+                "p": 0.0006966164407191135,
+                "t_stat": -3.555933974193877,
+                "Effect Size (Cohen's d)": 0.4230522282817837
+            },
+            {
+                "question": "to think creatively, innovatively and divergently initiate fresh solutions to complex problem",
+                "average_baseline": 3.75,
+                "average_final": 4.1911764705882355,
+                "average_change": 0.4411764705882353,
+                "average_change_percent": 11.029411764705882,
+                "n": 68,
+                "p": 8.6551808394659e-05,
+                "t_stat": -4.179489731394488,
+                "Effect Size (Cohen's d)": 0.5147986672909352
+            },
+            {
+                "question": "cognitive flexibility and curiosity to continue investigating the best solution when aspects of the innovation aren\u2019t working out",
+                "average_baseline": 3.7794117647058822,
+                "average_final": 4.205882352941177,
+                "average_change": 0.4264705882352941,
+                "average_change_percent": 10.661764705882353,
+                "n": 68,
+                "p": 0.00013753777866573003,
+                "t_stat": -4.045450466177489,
+                "Effect Size (Cohen's d)": 0.5157440594386034
+            },
+            {
+                "question": "to pitch an idea succinctly, clearly and persuasively, selecting appropriate presentation materials to support key information",
+                "average_baseline": 3.4705882352941178,
+                "average_final": 4.205882352941177,
+                "average_change": 0.7352941176470589,
+                "average_change_percent": 18.38235294117647,
+                "n": 68,
+                "p": 1.9723313880084985e-07,
+                "t_stat": -5.7995291319736,
+                "Effect Size (Cohen's d)": 0.7946524989512181
+            }
+        ]
+    },
+    {
+        "file": "Baseline_Reflection_on_your_Cultural_Intelligence_Skills-data.csv",
+        "averages": [
+            {
+                "question": "to articulate my own personal & workplace values",
+                "average_baseline": 3.9523809523809526,
+                "average_final": 4.365079365079365,
+                "average_change": 0.4126984126984127,
+                "average_change_percent": 10.317460317460316,
+                "n": 126,
+                "p": 3.4715024670929684e-07,
+                "t_stat": -5.384049882656784,
+                "Effect Size (Cohen's d)": 0.5355420253583314
+            },
+            {
+                "question": "to identity organisations that share my personal and workplace values",
+                "average_baseline": 3.611111111111111,
+                "average_final": 4.285714285714286,
+                "average_change": 0.6746031746031746,
+                "average_change_percent": 16.865079365079367,
+                "n": 126,
+                "p": 3.063755602163509e-13,
+                "t_stat": -8.159509138694881,
+                "Effect Size (Cohen's d)": 0.7491749684573783
+            },
+            {
+                "question": "at perceiving others\u2019 worldviews and effectively acknowledging, navigating and respecting these views when working in a multicultural team setting",
+                "average_baseline": 4.111111111111111,
+                "average_final": 4.349206349206349,
+                "average_change": 0.23809523809523808,
+                "average_change_percent": 5.952380952380952,
+                "n": 126,
+                "p": 0.0011683942111199027,
+                "t_stat": -3.323011108445941,
+                "Effect Size (Cohen's d)": 0.3164564004538815
+            },
+            {
+                "question": "and take into consideration local culture and business intelligence when working with an international client/organisation",
+                "average_baseline": 3.7777777777777777,
+                "average_final": 4.444444444444445,
+                "average_change": 0.6666666666666666,
+                "average_change_percent": 16.666666666666664,
+                "n": 126,
+                "p": 1.1991690795701766e-12,
+                "t_stat": -7.905694150420949,
+                "Effect Size (Cohen's d)": 0.7741360110566765
+            }
+        ]
+    }
+]
