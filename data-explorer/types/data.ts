@@ -52,7 +52,6 @@ export interface SkillImprovement {
       postgraduate: number;
       fields: [{name: string; value: number}];
     };
-    modules: Record<string, ModuleData>;
     timeline: {
       phases: Array<{
         phase: string;
