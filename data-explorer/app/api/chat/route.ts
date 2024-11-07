@@ -1,4 +1,3 @@
-import OpenAI from 'openai';
 import dotenv from 'dotenv';
 import { sendToGPTAssistant } from '@/lib/openaiHelper'; // Import the helper function
 import { NextRequest, NextResponse } from 'next/server';

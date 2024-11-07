@@ -2,14 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import { 
   LayoutDashboard,
-  Clock,
   Presentation,
   Download,
   ExternalLink,
   MessageSquare,
 } from 'lucide-react';
 import { colors } from '@/lib/colors';
-import { getButtonStyles } from '@/lib/colorUtils';
 
 // Views
 import DashboardView from '@/components/views/DashboardView';
@@ -21,7 +19,7 @@ import { ResearchData, MetricsData } from '@/types/data';
 export default function ResearchExplorer({ researchData, metricsData }: { researchData: ResearchData, metricsData: MetricsData }) {
   const [activeView, setActiveView] = useState('dashboard');
   const [rdata, setRData] = useState(researchData);
-  const [mdata, setMData] = useState(metricsData);
+  const [mdata] = useState(metricsData);
   const [loading, setLoading] = useState(!researchData);
 
   // Navigation options

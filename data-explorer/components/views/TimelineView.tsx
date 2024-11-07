@@ -19,9 +19,9 @@ import {
   CardTitle,
   CardDescription
 } from '@/components/ui/card';
-import { ResearchData } from '@/types/data';
+import { ResearchData, MetricsData } from '@/types/data';
 
-export default function TimelineView({ data }: { data: ResearchData }) {
+export default function TimelineView({ rdata, mdata }: { rdata: ResearchData, mdata: MetricsData }) {
   const [activePhase, setActivePhase] = useState(0);
   
   const formatPhaseData = () => {
@@ -29,49 +29,43 @@ export default function TimelineView({ data }: { data: ResearchData }) {
       {
         id: 0,
         title: "Research Setup",
-        date: data.timeline.phases[0].date,
+        date: rdata.timeline.phases[0].date,
         icon: <Brain className="w-6 h-6"/>,
         metrics: [
-          { label: "Students Enrolled", value: data.timeline.phases[0].metrics.studentsEnrolled },
-          { label: "Modules Designed", value: data.timeline.phases[0].metrics.modulesDesigned },
-          { label: "Target Skills", value: data.timeline.phases[0].metrics.targetSkills }
+          { label: "Students Enrolled", value: rdata.timeline.phases[0].metrics.studentsEnrolled },
+          { label: "Modules Designed", value: rdata.timeline.phases[0].metrics.modulesDesigned },
+          { label: "Target Skills", value: rdata.timeline.phases[0].metrics.targetSkills }
         ],
-        chartData: formatSkillsData(data.modules, 'start')
+        chartData: formatSkillsData(mdata, 'start')
       },
       {
         id: 1,
         title: "Data Collection",
-        date: data.timeline.phases[1].date,
+        date: rdata.timeline.phases[1].date,
         icon: <BarChart2 className="w-6 h-6"/>,
         metrics: [
-          { label: "Active Students", value: data.timeline.phases[1].metrics.activeStudents },
-          { label: "Completion Rate", value: `${data.timeline.phases[1].metrics.completionRate}%` },
-          { label: "Feedback Points", value: data.timeline.phases[1].metrics.feedbackPoints }
+          { label: "Active Students", value: rdata.timeline.phases[1].metrics.activeStudents },
+          { label: "Completion Rate", value: `${rdata.timeline.phases[1].metrics.completionRate}%` },
+          { label: "Feedback Points", value: rdata.timeline.phases[1].metrics.feedbackPoints }
         ],
-        chartData: formatProgressData(data.modules)
+        chartData: formatProgressData(mdata)
       },
       {
         id: 2,
         title: "Analysis",
-        date: data.timeline.phases[2].date,
+        date: rdata.timeline.phases[2].date,
         icon: <Target className="w-6 h-6"/>,
         metrics: [
-          { label: "Skill Improvement", value: `${data.timeline.phases[2].metrics.skillImprovement}%` },
-          { label: "Student Satisfaction", value: `${data.timeline.phases[2].metrics.studentSatisfaction}%` },
-          { label: "Industry Readiness", value: `${data.timeline.phases[2].metrics.industryReadiness}%` }
+          { label: "Skill Improvement", value: `${rdata.timeline.phases[2].metrics.skillImprovement}%` },
+          { label: "Student Satisfaction", value: `${rdata.timeline.phases[2].metrics.studentSatisfaction}%` },
+          { label: "Industry Readiness", value: `${rdata.timeline.phases[2].metrics.industryReadiness}%` }
         ],
-        chartData: formatSkillsData(data.modules, 'end')
+        chartData: formatSkillsData(mdata, 'end')
       }
     ];
   };
 
-  type Module = {
-    skillImprovements: Record<string, { before: number; after: number }>;
-    statisticalSignificance: { effectSize: number };
-    participation: { cohort1: { completed: number; started: number }; cohort2: { completed: number; started: number } };
-  };
-
-  const formatSkillsData = (modules: Record<string, Module>, period: 'start' | 'end') => {
+  const formatSkillsData = (modules: MetricsData, period: 'start' | 'end') => {
     if (!modules) return [];
     return Object.entries(modules).map(([key, value]) => ({
       skill: key,
@@ -82,7 +76,7 @@ export default function TimelineView({ data }: { data: ResearchData }) {
     }));
   };
 
-  const formatProgressData = (modules: Record<string, Module>) => {
+  const formatProgressData = (modules: MetricsData) => {
     if (!modules) return [];
     return Object.entries(modules).map(([key, value]) => ({
       module: key,

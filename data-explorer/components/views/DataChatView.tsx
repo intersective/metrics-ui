@@ -73,7 +73,7 @@ const transformChartData = (data: any[], chartCode: string): ChartData[] => {
 };
 
 // Add this function to safely evaluate JSX code
-const createComponentFromJSX = (code: string, chartData: any) => {
+const createComponentFromJSX = (code: string, chartData: ChartData[]) => {
   try {
     // Add debug logging
     console.log('Creating component from code:', code);
@@ -161,37 +161,6 @@ export default function DataChatView() {
   const [input, setInput] = useState('');
   const messagesEndRef = useRef<null | HTMLDivElement>(null);
 
-  // Check for pending request on mount
-  useEffect(() => {
-    const checkPending = async () => {
-      if (pendingRequest) {
-        await handleChatRequest(pendingRequest.message);
-      }
-    };
-    checkPending();
-  }, []);
-
-  // Hydrate messages with visualizations on mount and when serialized messages change
-  useEffect(() => {
-    const hydratedMessages = serializedMessages.map(msg => ({
-      role: msg.role,
-      content: msg.content,
-      timestamp: new Date(msg.timestamp),
-      visualization: msg.visualizationData ? 
-        createComponentFromJSX(
-          msg.visualizationData.code,
-          transformChartData(msg.visualizationData.data, msg.visualizationData.code)
-        ) : undefined
-    }));
-    setMessages(hydratedMessages);
-  }, [serializedMessages]);
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  useEffect(scrollToBottom, [messages]);
-
   const handleChatRequest = async (message: string) => {
     try {
       const response = await fetch('/api/chat', {
@@ -244,6 +213,38 @@ export default function DataChatView() {
     }
   };
 
+  // Check for pending request on mount
+  useEffect(() => {
+    const checkPending = async () => {
+      if (pendingRequest) {
+        await handleChatRequest(pendingRequest.message);
+      }
+    };
+    checkPending();
+  }, [pendingRequest, handleChatRequest]);
+
+  // Hydrate messages with visualizations on mount and when serialized messages change
+  useEffect(() => {
+    const hydratedMessages = serializedMessages.map(msg => ({
+      role: msg.role,
+      content: msg.content,
+      timestamp: new Date(msg.timestamp),
+      visualization: msg.visualizationData ? 
+        createComponentFromJSX(
+          msg.visualizationData.code,
+          transformChartData(msg.visualizationData.data, msg.visualizationData.code)
+        ) : undefined
+    }));
+    setMessages(hydratedMessages);
+  }, [serializedMessages]);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(scrollToBottom, [messages]);
+
+ 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim() || isLoading) return;

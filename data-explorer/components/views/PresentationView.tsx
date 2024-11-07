@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer, PieChart, Pie, Cell
 } from 'recharts';
 import { 
@@ -22,7 +22,7 @@ export default function PresentationView({ data }: { data: ResearchData }) {
   const [showNotes, setShowNotes] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [transitionDirection, setTransitionDirection] = useState('right');
-  const [gradientBg, setGradientBg] = useState('');
+  // const [gradientBg, setGradientBg] = useState('');
 
   useEffect(() => {
     // Create animated gradient background
@@ -236,7 +236,7 @@ export default function PresentationView({ data }: { data: ResearchData }) {
             <div className="grid grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl mb-4">Learning Outcomes</h3>
-                {Object.entries(data.findings.learningOutcomes.moduleSpecificFindings).map(([module, findings]: [string, any]) => (
+                {Object.entries(data.findings.learningOutcomes.moduleSpecificFindings).map(([module, findings]: [string, {key_improvement: string, statistical_significance: {p_value: string}}]) => (
                   <div key={module} className="mb-4">
                     <p className="font-semibold capitalize">{module}</p>
                     <p className="text-gray-600">Key Improvement: {findings.key_improvement}</p>
@@ -246,7 +246,7 @@ export default function PresentationView({ data }: { data: ResearchData }) {
               </div>
               <div className="h-full">
                 <ResponsiveContainer width="100%" height="100%">
-                  <RadarChart data={Object.entries(data.findings.learningOutcomes.moduleSpecificFindings).map(([key, value]: [string, any]) => ({
+                  <RadarChart data={Object.entries(data.findings.learningOutcomes.moduleSpecificFindings).map(([key, value]: [string, {key_improvement: string, statistical_significance: {p_value: string, effect_size: number}}]) => ({
                     subject: key.charAt(0).toUpperCase() + key.slice(1),
                     value: value.statistical_significance.effect_size * 100
                   }))}>

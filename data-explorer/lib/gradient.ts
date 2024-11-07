@@ -1,7 +1,5 @@
-import { colors } from './colors';
-
 export class Gradient {
-  gradient: any;
+  gradient: CanvasGradient | null = null;
   initGradient(elementId: string) {
     const canvas = document.getElementById(elementId) as HTMLCanvasElement;
     if (!canvas) return;
