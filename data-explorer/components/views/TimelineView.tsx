@@ -46,7 +46,7 @@ export default function TimelineView({ rdata, mdata }: { rdata: ResearchData, md
         metrics: [
           { label: "Active Students", value: rdata.timeline.phases[1].metrics.activeStudents },
           { label: "Completion Rate", value: `${rdata.timeline.phases[1].metrics.completionRate}%` },
-          { label: "Feedback Points", value: rdata.timeline.phases[1].metrics.feedbackPoints }
+          { label: "Feedback Points", value: rdata.timeline.phases[1].metrics.feed  backPoints }
         ],
         chartData: formatProgressData(mdata)
       },

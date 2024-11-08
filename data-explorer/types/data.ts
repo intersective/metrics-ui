@@ -43,32 +43,40 @@ export interface SkillImprovement {
       year: number;
       abstract: {
         summary: string;
-        keyFindings: [{key: string; description: string}];
+        keyFindings: {key: string; description: string}[];
       };
     };
     demographics: {
       totalParticipants: number;
       undergraduate: number;
       postgraduate: number;
-      fields: [{name: string; value: number}];
+      fields: {name: string; value: number}[];
     };
     timeline: {
-      phases: Array<{
+      phases: {
         phase: string;
         date: string;
-        metrics: Record<string, number>;
-      }>;
+        metrics: {
+          skillImprovement?: number;
+          studentSatisfaction?: number;
+          industryReadiness?: number;
+            activeStudents?: number;
+            completionRate?: number;
+            feedbackPoints?: number;
+            studentsEnrolled?: number;
+            modulesDesigned?: number;
+            targetSkills?: number;
+        };
+      }[];
     };
-    recommendations: [
-      {
-        area: string;
-        description: string;
-        benefits: string[];
-      }
-    ];
+    recommendations: {
+      area: string;
+      description: string;
+      benefits: string[];
+    }[];
     findings: {
       overallImpact: {
-        keyMetrics: [{metric: string; value: number}];
+        keyMetrics: {metric: string; value: number}[];
         studentSatisfaction: number;
         industryReadiness: {
           selfReported: number;
@@ -83,8 +91,8 @@ export interface SkillImprovement {
       professionalReadiness: {};
     };
     methodology: {};
-    limitations: [];
-    references: [];
+    limitations: {type: string; description: string;}[];
+    references: {}[];
   }
 
   export interface MetricsData {
